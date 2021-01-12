@@ -1,0 +1,21 @@
+/*
+canvas{ display: block; vertical-align: bottom; }
+
+#particles-js{
+	position:absolute;
+	z-index: -10;
+	width: 100%; height: 100%;
+	background-color: #cdc3b2; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%; }
+*/
+
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+	background-color: #300f4f; /* #cdc3b2; #91846e; */
+}

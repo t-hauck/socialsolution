@@ -1,0 +1,167 @@
+.meios-pagamento {
+    font-weight: bold;
+ }
+
+    /*
+     * -- PRICING TABLE HEADER --
+    .pricing-table-header h2 {
+        padding-top: 2em;
+    }
+    */
+
+    .pricing-table-header {
+        text-align: center;
+        color: #fe3c72;
+    }
+
+    /*
+     * -- PRICING TABLE PRICE --
+     * Styles for the price and the corresponding <span>per month</span>
+    */
+
+    .pricing-table-price {
+        font-size: 3em;
+        margin: 0.2em 0 0;
+        font-weight: 100;
+    }
+    .pricing-table-price span {
+        display: block;
+        text-transform: uppercase;
+        font-size: 0.2em;
+        padding-bottom: 2em;
+        font-weight: 400;
+        color: #1f8dd6;
+    }
+
+.modalWindow {
+position: fixed;
+font-size:80%;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background: rgba(0,0,0,0.2);
+z-index: 99999;
+opacity:0;
+-webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+pointer-events: none;
+}
+.modalHeader h2 { color: #189CDA; border-bottom: 2px groove #efefef; }
+.modalWindow:target {
+opacity:1;
+pointer-events: auto;
+}
+.modalWindow > div {
+position: relative;
+margin: 10% auto;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #fff;
+}
+.modalWindow .modalHeader { padding: 5px 20px 0px 20px; }
+.modalWindow .modalContent { padding: 0px 20px 5px 20px; }
+.modalWindow .modalFooter { padding: 8px 20px 8px 20px; }
+.modalFooter {
+background: #F1F1F1;
+border-top: 1px solid #999;
+-moz-box-shadow: inset 0px 13px 12px -14px #888;
+-webkit-box-shadow: inset 0px 13px 12px -14px #888;
+box-shadow: inset 0px 13px 12px -14px #888;
+}
+.modalFooter p {
+color:#D4482D;
+text-align:right;
+margin:0;
+padding: 5px;
+}
+.ok, .close, .cancel {
+background: #606061;
+color: #FFFFFF;
+line-height: 25px;
+text-align: center;
+text-decoration: none;
+font-weight: bold;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+-moz-box-shadow: 1px 1px 3px #000;
+-webkit-box-shadow: 1px 1px 3px #000;
+box-shadow: 1px 1px 3px #000;
+}
+.close {
+position: absolute;
+right: 5px;
+top: 5px;
+width: 22px;
+height: 22px;
+font-size: 10px;
+
+}
+.ok, .cancel {
+width:80px;
+float:right;
+margin-left:20px;
+}
+.ok:hover { background: #189CDA; }
+.close:hover, .cancel:hover { background: #D4482D; }
+.clear { float:none; clear: both; }
+
+#div-pay-img {
+	text-align: center;
+}
+
+.paypal { padding-right: 5px; max-width: 30px; }
+.picpay { padding-left: 5px; max-width: 35px;}
+
+.paypal, .picpay {
+    margin-left: auto;
+    margin-right: auto;
+	display: inline-block;
+	text-align: center;
+}
+
+@media (max-width: 47em) {
+    .modalWindow > div {
+        max-width: 90em;
+    }
+
+    .video-conteudodigital {
+        width: 95%;
+    }
+
+}
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+ @media (min-width: 48em) {
+    .modalWindow > div {
+        width: 500px;
+    }
+
+    .video-conteudodigital {
+        width: 100px;
+    }
+
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+ @media (min-width: 78em) {
+    .modalWindow > div {
+        width: 500px;
+    }
+
+    .video-conteudodigital {
+        margin-top: 20px;
+        width: 400px;
+    }
+
+}

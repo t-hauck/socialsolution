@@ -1,0 +1,561 @@
+@font-face {
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/Permanent-Marker.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../fonts/ubuntu/Ubuntu-Regular.ttf ');
+}
+@font-face {
+    font-family: 'Ubuntu-MediumItalic';
+    src: url('../fonts/ubuntu/Ubuntu-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-BoldItalic';
+    src: url('../fonts/ubuntu/Ubuntu-BoldItalic.ttf');
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+*/
+
+/* texto-negrito = Social Solution ... */
+.texto-negrito { font-weight: bold; }
+
+.video-conteudodigital {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 3px dashed #d3b770;
+}
+
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+    font-family: 'Ubuntu-Regular';
+}
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+ * -- LAYOUT STYLES --
+ * These are some useful classes which I will need
+ */
+.l-box {
+    padding: 1em;
+}
+
+.l-box-lrg {
+    padding: 2em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.is-center {
+    text-align: center;
+}
+
+
+
+/*
+ * -- PURE FORM STYLES --
+ * Style the form inputs and labels
+ */
+.pure-form label {
+    margin: 1em 0 0;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.checkbox-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-espaco {
+    margin: auto;
+}
+
+.checkbox-children {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tamanho-texto {
+    width: 100%;
+}
+
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+.pure-button {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+a.pure-button-primary {
+    background: white;
+    color: #fe3c72;
+    border-radius: 5px;
+    font-size: 120%;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.pure-button-primary:hover {
+    background: #fe3c72;
+    color: white;
+}
+
+.submit-color:hover{
+    transition: 0.25s;
+    background: #fe3c72;
+}
+
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    /* box-shadow: 0 1px 1px rgba(0,0,0, 0.10); */
+}
+
+.home-menu {
+    background: transparent; /* #3b526b; #2d3e50; */
+    /* transition: top 0.5s; /* Transition effect when sliding down (and up)
+    transition-duration: 5s */
+}
+
+.pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.home-menu a {
+    color: #fe3c72;
+}
+
+.home-menu li a:hover, .a-link:hover,
+.home-menu li a:focus, .a-link:focus {
+    background: none;
+    border: none;
+    color: #a9284c;
+}
+
+.a-link {
+    color: #7f8c8d;
+    text-decoration: none;
+}
+
+.cliqueaqui-mouse { color: #a9284c; }
+.cliqueaqui-text:hover, .cliqueaqui-text:focus { font-weight: bold; }
+
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
+
+.splash-container {
+/*    background: gray; */
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 88%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* This is the main heading that appears on the blue section */
+.splash-head {
+    /* background: red; */
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white; /* #8a2be2; */
+    border: 3px solid white;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+/* This is the subheading that appears on the blue section */
+.splash-subhead {
+    color: #ffffff;
+    font-family: 'Ubuntu-Bold';
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+}
+.content-firsth2 { font-family: 'Ubuntu-MediumItalic'; }
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+
+}
+
+#sobre h2 { text-align: center; }
+
+.nossos-servicos {
+    background-color: #edd9a6; 
+    text-align: center;
+
+    border-color:#fe3c72;
+    border-style: solid;
+    border-width: 1px 0 0px 0;
+}
+
+.nossos-servicos p { font-weight: bold; }
+
+#nossos-planos {
+    text-align: left;
+    text-transform: initial;
+}
+
+.followday-hashtag-icontext {
+    max-width: 100%;
+    height: auto;
+    color: #fe3c72;
+    font-size: 2rem;
+}
+
+.followday-hashtag-text {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.followday-nossosplanos {
+    font-family: 'Ubuntu-BoldItalic';
+    font-weight: 900;
+}
+
+.plano-inicial, .plano-intermediario, .plano-avancado {
+    max-width: 100em;
+}
+
+.plano-inicial:focus, .plano-inicial:hover,
+.plano-intermediario:focus, .plano-intermediario:hover,
+.plano-avancado:focus, .plano-avancado:hover {
+    background-color: #cce9fc;
+    cursor: pointer;
+}
+
+
+/* We want to give the content area some more padding
+.content {
+    padding: 1em 1em 3em;
+} */
+
+/* This is the class used for the main content headers (<h2>) */
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+
+}
+
+/* This is a modifier class used when the content-head is inside a ribbon
+.content-head-ribbon {
+     color: white;
+} */
+
+/* This is the class used for the content sub-headers (<h3>) */
+.content-subhead {
+    color: #1f8dd6;
+}
+
+.content-subhead i {
+    margin-right: 7px;
+}
+
+/* This is the class used for the dark-background areas. */
+.ribbon {
+    background: white; /* #e5e0e0; - #cdc3b2; #2d3e50; */
+    color: #aaa;
+}
+
+/* This is the class used for the footer */
+.footer {
+    background: #192024;
+    position: relative; /* fixed; */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-nome {
+    text-align: center;
+    padding: 10px;
+}
+
+#social-divscroll {
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+    background: #eeeeee;
+    border-radius: 5px;
+
+    padding: 10px 0 5px 0;
+    /*                                                                         top  right bottom left    
+                                                                        superior direito inferior esquerdo */
+
+    bottom: 0;
+    height: auto;
+
+    /* margin: 100px auto; */
+    margin-left: 10px;
+    margin-bottom: 10%;
+
+    text-align: center;
+    /* display: none; /* não aparece em celulares - veja mais abaixo "@media (min-width:" */
+
+    /* configuração para CELULARES */
+    position: relative;
+    margin: 20px 0 20px 20px;
+    width: 150px;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: #a9284c;
+    text-decoration: none;
+}
+
+.banner-img { border: 5px outset #fe3c72; } /* https://www.w3schools.com/css/css_border.asp */
+
+.recomendacoes-contratacao-img { border: 1px solid #fe3c72; }
+
+.div-recomendacoes { background-color: #f8edf0; }
+
+/* TAMANHO DO LOGO PARA CELULARES */
+.img-logo {
+    width: 40vh;
+    height: auto;
+}
+
+.text-limitacao-textareaform {
+    min-height: 10em;
+    max-height: 10em;
+
+    min-width: 20em;
+    max-width: 50em;
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+    #social-divscroll {
+        position: fixed;
+        margin: 0 0 100px 20px;
+        width: 35px;
+    }
+
+    /* We increase the body font size */
+    body {
+        font-size: 16px;
+    }
+
+    .img-logo {
+        width: 50vw;
+        height: auto;
+    }
+
+    /* We can align the menu header to the left, but float the
+    menu items to the right. */
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            float: right;
+        }
+
+    /* We increase the height of the splash-container */
+/*    .splash-container {
+        height: 500px;
+    }*/
+
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+
+    .splash-head {
+        font-size: 250%;
+    }
+
+
+    /* We remove the border-separator assigned to .l-box-lrg */
+    .l-box-lrg {
+        border: none;
+    }
+
+	.followday-hashtag-icontext {
+		font-size: 3rem;
+    }
+    
+    .nossos-servicos-atendimento { text-align: center; } /* em 'celular' o texto do Atendimento começa da esquerda  */
+    .nossos-servicos { text-align: start; }
+    .visao-missao-valores h3, .nossos-servicos h3 { font-size: 1.5rem; }
+    .visao-missao-valores p, .nossos-servicos p { font-size: 1rem; }
+    .visao-missao-valores, .nossos-servicos, #nossos-planos, .nossos-planos-lista, #contato { padding: 0 5em 0 5em; }
+    /*                                                                         top  right bottom left    
+                                                                        superior direito inferior esquerdo */
+
+    .plano-avancado {
+        text-align: center;
+    }
+
+    .video-conteudodigital {
+        min-width: 250px;
+    }
+
+    .banner-img {
+        width: 60%;
+    }
+
+    .text-limitacao-textareaform {
+        min-height: 100px;
+        max-height: 100px;
+
+        min-width: 20em;
+        max-width: 100em;
+    }
+    
+    .contato-img {
+        max-width: 60%;
+        margin-left: 9vw;
+    }
+
+    /* .footer-nome { text-align: end; }  EM COMPUTADOR O TEXTO FICA NO CANTO DA TELA*/
+
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 78em) {
+    .img-logo {
+        width: 50vh;
+        height: auto;
+    }
+
+    .splash-head {
+        font-size: 300%;
+    }
+
+    #sobre h2 { text-align: start; }
+
+	.followday-hashtag-icontext {
+		font-size: 4rem;
+	}
+
+    .video-conteudodigital {
+        max-width: 350px;
+    }
+
+    .plano-avancado {
+        text-align: left;
+    }
+
+    .banner-img {
+        width: 50%;
+    }
+
+    .text-limitacao-textareaform {
+        min-width: 500px;
+        max-width: 500px;
+    }
+
+    .contato-img {
+        max-width: 50%;
+    }
+
+}
