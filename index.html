@@ -314,7 +314,9 @@
                             <br>
                             <div class="g-recaptcha" data-sitekey="6Le5CQwaAAAAAE462qXvJK-Plk4m8gI7z4QgVgwv"></div>
 
-                            <button  id="form-submit alertform" type="submit" class="pure-button submit-color">Enviar</button>
+                            <button 
+				<script> window.alert("Nota: a empresa descrita neste site é fícticia, não existe - mas o site está totalmente funcional, o formulário de contato usa PHP para enviar os dados por e-mail e o código (menos os arquivos em PHP) pode ser visto aqui: https://github.com/thiagohauck/socialsolution");  </script>
+				    id="form-submit" type="submit" class="pure-button submit-color">Enviar</button>
                             
                         </fieldset>
                     </form>
@@ -340,7 +342,7 @@
                     <a class="a-link" href="https://wa.me/554198380108?text=socialsolution.com.br">(41) 9838-0108</a>
 
                     <h3>Facebook e Instagram</h3>
-                    <p>@socialsolution-br</p>
+                    <p>@socialsolutiondigital</p>
 
                     <!--
                     <h4 class="content-head" id="perguntasContratacao">Questionário após Contratação</h4>
@@ -363,11 +365,11 @@
     </div> <!-- content id="contato" -->
 
     <div id="social-divscroll">
-        <a title="Siga-nos no Facebook" class="social-link" href="https://facebook.com" target="_blank">
+        <a title="Siga-nos no Facebook" class="social-link" href="https://facebook.com/socialsolutiondigital" target="_blank">
             <i class="fab fa-facebook"> </i>
         </a>
 
-        <a title="Siga-nos no Instagram" class="social-link" href="https://instagram.com" target="_blank">
+        <a title="Siga-nos no Instagram" class="social-link" href="https://instagram.com/socialsolutiondigital" target="_blank">
             <i class="fab fa-instagram-square"> </i>
         </a>
         
@@ -529,13 +531,8 @@
 
 <!-- -->
 <!-- SCRIPTS -->
+<!-- BLOQUEIO do botão direito do mouse -->
 <script>
-/* Nota de aviso - formulário de contato */
-function alertform(){
-	window.alert("Nota: a empresa descrita neste site é fícticia, não existe - mas o site está totalmente funcional, o formulário de contato usa PHP para enviar os dados por e-mail e o código (menos os arquivos em PHP) pode ser visto aqui: https://github.com/thiagohauck/socialsolution"); 
-}
-	
-/* BLOQUEIO do botão direito do mouse */
     if (document.addEventListener) {
         document.addEventListener("contextmenu", function(e) {
             e.preventDefault();
