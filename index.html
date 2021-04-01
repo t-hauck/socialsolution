@@ -314,7 +314,7 @@
                             <br>
                             <div class="g-recaptcha" data-sitekey="6Le5CQwaAAAAAE462qXvJK-Plk4m8gI7z4QgVgwv"></div>
 
-                            <button  id="form-submit" type="submit" class="pure-button submit-color">Enviar</button>
+                            <button  id="form-submit alertform" type="submit" class="pure-button submit-color">Enviar</button>
                             
                         </fieldset>
                     </form>
@@ -531,8 +531,9 @@
 <!-- SCRIPTS -->
 <script>
 /* Nota de aviso - formulário de contato */
-document.getElementById("form-submit").innerHTML = "Nota: a empresa descrita neste site é fícticia, não existe - mas o site está totalmente funcional, o formulário de contato usa PHP para enviar os dados por e-mail e o código (menos os arquivos em PHP) pode ser visto aqui: https://github.com/thiagohauck/socialsolution "; 
-	
+function alertform(){
+	window.alert("Nota: a empresa descrita neste site é fícticia, não existe - mas o site está totalmente funcional, o formulário de contato usa PHP para enviar os dados por e-mail e o código (menos os arquivos em PHP) pode ser visto aqui: https://github.com/thiagohauck/socialsolution"); 
+}
 	
 /* BLOQUEIO do botão direito do mouse */
     if (document.addEventListener) {
